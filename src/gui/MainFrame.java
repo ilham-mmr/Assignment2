@@ -98,6 +98,7 @@ public class MainFrame extends JFrame {
 
         JMenu windowMenu = new JMenu("Window");
         hideLeftPanelItem = new JCheckBoxMenuItem("left panel");
+        hideLeftPanelItem.setSelected(true);
         
         JMenu aboutMenu = new JMenu("About");
 
@@ -160,7 +161,7 @@ public class MainFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 boolean selected = hideLeftPanelItem.isSelected();
 
-                leftPane.setVisible(!selected);
+                leftPane.setVisible(selected);
 
             }
         });
